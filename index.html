@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuri Ezveci Hair Salon Alanya | Premium Kuaför Sitesi</title>
+  <meta name="description" content="Nuri Ezveci Hair Salon Alanya için hazırlanmış ultra premium kuaför sitesi. Güçlü sosyal kanıt, hızlı randevu, premium sunum ve mobil uyumlu yüksek kalite deneyim." />
+  <meta name="theme-color" content="#0b0b10" />
+  <meta property="og:title" content="Nuri Ezveci Hair Salon Alanya" />
+  <meta property="og:description" content="Alanya'da premium saç tasarımı, güçlü sosyal kanıt ve hızlı randevu deneyimi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#090a0e;
+      --bg2:#11141a;
+      --panel:rgba(255,255,255,.06);
+      --panel-2:rgba(255,255,255,.04);
+      --line:rgba(255,255,255,.1);
+      --text:#f5f2ed;
+      --muted:#b8b3aa;
+      --soft:#8d8a83;
+      --gold:#d7b279;
+      --gold-2:#f0d7b2;
+      --rose:#c8977b;
+      --glow:rgba(215,178,121,.22);
+      --shadow:0 24px 60px rgba(0,0,0,.38);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
+      --max:1180px;
+      --nav-h:78px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 14% 12%, rgba(215,178,121,.10), transparent 26%),
+        radial-gradient(circle at 84% 18%, rgba(200,151,123,.10), transparent 22%),
+        radial-gradient(circle at 55% 88%, rgba(255,255,255,.05), transparent 25%),
+        linear-gradient(180deg,#090a0e 0%,#0d1015 45%,#12161c 100%);
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .bg-noise,.bg-grid,.bg-glow,.shooting-stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+    .bg-noise{
+      opacity:.08;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.5"/></svg>');
+      mix-blend-mode:soft-light;
+    }
+    .bg-grid{
+      background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:52px 52px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.75), transparent 88%);
+      opacity:.18;
+    }
+    .bg-glow::before,.bg-glow::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      filter:blur(90px);
+      opacity:.22;
+      animation:floatGlow 10s ease-in-out infinite alternate;
+    }
+    .bg-glow::before{width:360px;height:360px;left:-90px;top:6%;background:rgba(215,178,121,.78)}
+    .bg-glow::after{width:320px;height:320px;right:-70px;top:18%;background:rgba(200,151,123,.72);animation-duration:13s}
+
+    .shooting-stars{overflow:hidden}
+    .shooting-stars span{
+      position:absolute;
+      width:260px;
+      height:2px;
+      background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,1), rgba(215,178,121,0));
+      transform:rotate(-28deg);
+      opacity:0;
+      filter:drop-shadow(0 0 14px rgba(255,255,255,.6)) drop-shadow(0 0 22px rgba(215,178,121,.4));
+      animation:starFly 3.6s linear infinite;
+    }
+
+    /* ekstra küçük parlayan yıldızlar */
+    .bg-glow::after, .bg-glow::before{
+      box-shadow:
+        50px 80px 2px rgba(255,255,255,.4),
+        120px 140px 2px rgba(255,255,255,.3),
+        200px 60px 2px rgba(255,255,255,.35),
+        300px 180px 2px rgba(255,255,255,.25),
+        400px 120px 2px rgba(255,255,255,.3),
+        500px 200px 2px rgba(255,255,255,.35),
+        600px 90px 2px rgba(255,255,255,.25),
+        700px 160px 2px rgba(255,255,255,.3);
+    }
+    }
+    .shooting-stars span:nth-child(1){top:6%;right:10%;animation-delay:.2s}
+    .shooting-stars span:nth-child(2){top:14%;right:28%;animation-delay:1.1s;animation-duration:4.2s}
+    .shooting-stars span:nth-child(3){top:10%;right:48%;animation-delay:2.1s;animation-duration:5.1s}
+    .shooting-stars span:nth-child(4){top:24%;right:14%;animation-delay:2.8s;animation-duration:4s}
+    .shooting-stars span:nth-child(5){top:8%;right:66%;animation-delay:3.6s;animation-duration:4.6s}
+    .shooting-stars span:nth-child(6){top:22%;right:40%;animation-delay:1.7s;animation-duration:4.4s}
+    .shooting-stars span:nth-child(7){top:31%;right:56%;animation-delay:4.2s;animation-duration:5s}
+    .shooting-stars span:nth-child(8){top:17%;right:78%;animation-delay:2.5s;animation-duration:4.3s}
+
+    @keyframes starFly{
+      0%{transform:translate3d(0,0,0) rotate(-28deg) scaleX(.5);opacity:0}
+      8%{opacity:1}
+      35%{transform:translate3d(-320px,200px,0) rotate(-28deg) scaleX(1.2)}
+      45%,100%{opacity:0;transform:translate3d(-450px,300px,0) rotate(-28deg) scaleX(1)}
+    }
+
+    /* sürekli parlayan minik yıldız efekti */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.5), transparent),
+        radial-gradient(2px 2px at 70% 60%, rgba(255,255,255,.4), transparent),
+        radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,.4), transparent),
+        radial-gradient(2px 2px at 80% 20%, rgba(255,255,255,.5), transparent);
+      animation:twinkle 2.5s infinite alternate;
+      z-index:0;
+    }
+
+    @keyframes twinkle{
+      0%{opacity:.4}
+      100%{opacity:.9}
+    }
+      6%{opacity:1}
+      26%{transform:translate3d(-280px,185px,0) rotate(-28deg) scaleX(1.08)}
+      34%,100%{opacity:0;transform:translate3d(-390px,265px,0) rotate(-28deg) scaleX(.92)}
+    }
+    @keyframes floatGlow{from{transform:translateY(-20px) scale(1)}to{transform:translateY(26px) scale(1.08)}}
+    @keyframes heroPulse{
+      0%{opacity:.35;transform:scale(.96)}
+      50%{opacity:.62;transform:scale(1.04)}
+      100%{opacity:.4;transform:scale(.98)}
+    }
+    @keyframes fadeRise{
+      0%{opacity:0;transform:translateY(34px)}
+      100%{opacity:1;transform:translateY(0)}
+    }
+
+    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto;position:relative;z-index:2}
+    .reveal{opacity:0;transform:translateY(42px) scale(.97);filter:blur(10px);transition:opacity 1.15s cubic-bezier(.22,1,.36,1), transform 1.15s cubic-bezier(.22,1,.36,1), filter 1.15s ease}
+    .reveal.visible{opacity:1;transform:none;filter:blur(0)}
+    .reveal-left{opacity:0;transform:translateX(-56px) scale(.98);filter:blur(10px);transition:opacity 1.15s cubic-bezier(.22,1,.36,1), transform 1.15s cubic-bezier(.22,1,.36,1), filter 1.15s ease}
+    .reveal-right{opacity:0;transform:translateX(56px) scale(.98);filter:blur(10px);transition:opacity 1.15s cubic-bezier(.22,1,.36,1), transform 1.15s cubic-bezier(.22,1,.36,1), filter 1.15s ease}
+    .reveal-left.visible,.reveal-right.visible{opacity:1;transform:none;filter:blur(0)}
+    @keyframes shimmerFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    @keyframes slowFloat{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+    @keyframes statGlow{0%{box-shadow:0 0 0 rgba(215,178,121,0), inset 0 1px 0 rgba(255,255,255,.06)}50%{box-shadow:0 0 36px rgba(215,178,121,.18), inset 0 1px 0 rgba(255,255,255,.08)}100%{box-shadow:0 0 0 rgba(215,178,121,0), inset 0 1px 0 rgba(255,255,255,.06)}}
+    @keyframes borderDance{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+    .nav-wrap{
+      position:sticky;top:0;z-index:70;
+      background:rgba(10,11,16,.48);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      transition:transform .35s ease, background .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    .nav-wrap.hide{transform:translateY(-100%)}
+    .nav-wrap.scrolled{
+      background:rgba(8,10,14,.78);
+      border-bottom:1px solid rgba(255,255,255,.11);
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+    }
+    .nav{min-height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;flex-direction:column;gap:4px;min-width:0}
+    .brand strong{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1;font-weight:700;letter-spacing:.04em}
+    .brand span{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+    .nav-links{display:flex;align-items:center;gap:24px;font-weight:600;color:#e8e2d9}
+    .nav-links a{position:relative}
+    .nav-links a::after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent);transition:width .25s ease}
+    .nav-links a:hover::after{width:100%}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      min-height:56px;padding:0 22px;border-radius:999px;border:1px solid transparent;
+      font-weight:800;letter-spacing:.02em;cursor:pointer;
+      transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-4px) scale(1.02)}
+    .btn-primary{
+      color:#120f0a;
+      background:linear-gradient(135deg,var(--gold-2),var(--gold),#f7e5c8,var(--gold));
+      background-size:220% 220%;
+      box-shadow:0 16px 38px rgba(215,178,121,.22), inset 0 1px 0 rgba(255,255,255,.55), 0 0 32px rgba(215,178,121,.16);
+      animation:shimmerFlow 6s ease infinite;
+    }
+    .btn-outline{
+      border-color:rgba(255,255,255,.11);
+      background:linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      color:var(--text);
+      box-shadow:var(--shadow), 0 0 22px rgba(255,255,255,.04);
+    }
+    .btn-soft{
+      border-color:rgba(255,255,255,.09);
+      background:rgba(255,255,255,.045);
+      color:var(--text);
+    }
+    .btn svg{width:18px;height:18px;flex:0 0 18px}
+
+    .hero{padding:48px 0 26px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:24px;align-items:stretch}
+    .hero-main,.glass,.card,.cta-band,.map-wrap{
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px);
+    }
+    .hero-main{
+      min-height:700px;border-radius:36px;padding:40px;position:relative;overflow:hidden;
+      display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;
+      box-shadow:0 35px 90px rgba(0,0,0,.42);
+    }
+    .hero-main::before{
+      content:"";position:absolute;inset:0;
+      background:
+        linear-gradient(180deg, rgba(4,5,8,.12) 0%, rgba(7,9,13,.48) 34%, rgba(7,9,13,.82) 62%, rgba(7,9,13,.96) 100%),
+        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      transform:scale(1.05);
+      z-index:-2;
+    }
+    .hero-main::after{
+      content:"";position:absolute;right:-90px;bottom:-120px;width:380px;height:380px;
+      background:radial-gradient(circle, rgba(215,178,121,.32), transparent 60%);
+      z-index:-1;
+      animation:heroPulse 6s ease-in-out infinite;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:100%;flex-wrap:wrap;
+      padding:10px 15px;border-radius:999px;background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.11);margin-bottom:10px;
+      font-size:.84rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    }
+    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#fff)}
+    .hero h1{margin:0;font-family:'Cormorant Garamond',serif;font-size:clamp(3.4rem,6vw,6rem);line-height:.92;max-width:9.5ch;text-wrap:balance;color:#fff;text-shadow:0 10px 28px rgba(0,0,0,.34);animation:fadeRise .95s cubic-bezier(.22,1,.36,1) both;position:relative}
+    .hero h1::after{content:"";position:absolute;left:0;bottom:-12px;width:170px;height:2px;background:linear-gradient(90deg, rgba(240,215,178,.95), rgba(240,215,178,0));box-shadow:0 0 22px rgba(240,215,178,.42);animation:shimmerFlow 5s linear infinite}
+    .hero h1 span{display:block;background:linear-gradient(90deg,#fff6ea,var(--gold-2),#fff6ea);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;animation:shimmerFlow 7s ease infinite}
+    .hero p{margin:18px 0 0;max-width:640px;line-height:1.95;color:#f8f2ea;font-size:1.06rem;font-weight:500;padding:18px 20px;border-radius:20px;background:linear-gradient(180deg, rgba(7,9,13,.68), rgba(7,9,13,.40));border:1px solid rgba(255,255,255,.10);box-shadow:0 14px 40px rgba(0,0,0,.24), 0 0 30px rgba(215,178,121,.07);backdrop-filter:blur(10px);animation:fadeRise 1.15s cubic-bezier(.22,1,.36,1) both .08s}
+    .hero .handwritten{display:inline-block;font-family:'Caveat',cursive;font-size:2rem;color:#f2dec5;margin-top:16px;letter-spacing:.02em;text-shadow:0 8px 18px rgba(0,0,0,.35);animation:fadeRise 1.2s cubic-bezier(.22,1,.36,1) both .16s}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;animation:fadeRise 1.25s cubic-bezier(.22,1,.36,1) both .24s}
+    .hero-actions .btn{min-height:60px;padding-inline:26px}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px;max-width:760px;animation:fadeRise 1.3s cubic-bezier(.22,1,.36,1) both .32s}
+    .stat{padding:18px 16px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.10);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);animation:slowFloat 5.5s ease-in-out infinite, statGlow 4.6s ease-in-out infinite}
+    .stat:nth-child(2){animation-delay:.5s,.8s}
+    .stat:nth-child(3){animation-delay:1s,1.4s}
+    .stat strong{display:block;font-size:1.65rem;margin-bottom:6px;font-family:'Cormorant Garamond',serif;letter-spacing:.05em}
+    .stat span{display:block;color:#e4ddd3;font-size:.93rem;line-height:1.62}
+
+    .side-stack{display:grid;gap:18px}
+    .panel{border-radius:28px;padding:28px;position:relative;overflow:hidden}
+    .panel h3,.section-head h2{margin:0;font-family:'Cormorant Garamond',serif;font-size:2.2rem;line-height:1;letter-spacing:.03em}
+    .panel p,.section-head p{margin:12px 0 0;color:#d7d1c8;line-height:1.82;font-size:.99rem}
+    .mini-block{margin-top:18px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .mini-block strong{display:block;font-size:1rem;margin-bottom:7px;color:#fff}
+    .mini-block span{display:block;color:#ded7ce;line-height:1.78}
+
+    .hours{display:grid;gap:8px;margin-top:16px}
+    .hour-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07)}
+    .hour-row span:first-child{font-weight:700;color:#f2ece4;text-transform:lowercase}
+    .hour-row span:last-child{color:var(--muted);text-align:right}
+
+    section{padding:42px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .small-tag{padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#efe6db}
+
+    .grid-4,.grid-3,.faq-grid,.contact-grid,.gallery-grid{display:grid;gap:18px}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .faq-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .contact-grid{grid-template-columns:1fr 1.08fr}
+    .gallery-grid{grid-template-columns:1.1fr .9fr .9fr 1.1fr;grid-auto-rows:235px}
+
+    .card{padding:24px;border-radius:24px;position:relative;overflow:hidden;transition:transform .4s ease,border-color .4s ease,box-shadow .4s ease, background .4s ease}
+    .card::before{content:"";position:absolute;inset:-1px;opacity:0;background:linear-gradient(120deg, transparent 0%, rgba(255,255,255,.07) 40%, rgba(215,178,121,.15) 50%, transparent 60%);transform:translateX(-120%);transition:opacity .3s ease}
+    .card:hover::before{opacity:1;animation:borderDance 1.15s ease}
+    .card:hover p,.card:hover h3,.card:hover h4{transform:translateY(-1px)}
+    .card:hover{transform:translateY(-4px);border-color:rgba(215,178,121,.25);box-shadow:0 28px 60px rgba(0,0,0,.38), inset 0 0 0 1px rgba(215,178,121,.08)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(215,178,121,.18), rgba(255,255,255,.09));border:1px solid rgba(255,255,255,.11);margin-bottom:16px}
+    .icon svg{width:24px;height:24px}
+    .card h3,.card h4{margin:0 0 10px;font-size:1.14rem;line-height:1.38}
+    .card p{margin:0;color:#ddd6cc;line-height:1.8;font-size:.97rem}
+    .service-card h3{font-family:'Cormorant Garamond',serif;font-size:2rem;line-height:1;text-transform:capitalize}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .tag{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);font-size:.83rem;font-weight:700;color:#eee3d4}
+
+    .gallery-card{position:relative;overflow:hidden;border-radius:26px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);min-height:100%;background:#11151b}
+    .gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease,filter .5s ease;filter:saturate(.95) contrast(1.04) brightness(.92)}
+    .gallery-card:hover img{transform:scale(1.1);filter:saturate(1.05) contrast(1.08) brightness(1)}
+    .gallery-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(9,10,14,.02), rgba(9,10,14,.25) 58%, rgba(9,10,14,.62))}
+    .gallery-card.large{grid-column:span 2;grid-row:span 2}
+    .gallery-label{position:absolute;left:18px;bottom:18px;z-index:1;padding:10px 14px;border-radius:999px;background:rgba(9,10,14,.64);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);font-size:.84rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+
+    .cta-band{
+      animation:slowFloat 6s ease-in-out infinite;
+
+      padding:30px;border-radius:32px;display:flex;align-items:center;justify-content:space-between;gap:22px;position:relative;overflow:hidden;
+      background:radial-gradient(circle at 15% 25%, rgba(215,178,121,.16), transparent 20%), radial-gradient(circle at 84% 28%, rgba(200,151,123,.16), transparent 22%), linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.04));
+    }
+    .cta-band h3{margin:0;font-family:'Cormorant Garamond',serif;font-size:2.4rem;line-height:1}
+    .cta-band p{margin:10px 0 0;color:#ddd6cc;line-height:1.78;max-width:700px}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+    details{border-radius:18px;padding:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+    summary{list-style:none;cursor:pointer;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:12px;text-transform:lowercase}
+    summary::-webkit-details-marker{display:none}
+    details p{margin:14px 0 0;color:var(--muted);line-height:1.78}
+
+    .contact-list{display:grid;gap:14px;margin-top:18px}
+    .contact-item{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .contact-item svg{width:22px;height:22px;flex:0 0 22px;margin-top:2px}
+    .contact-item strong{display:block;margin-bottom:4px;font-size:1rem}
+    .contact-item span,.contact-item a{color:#ddd6cc;line-height:1.7;word-break:break-word}
+
+    .map-wrap{border-radius:28px;overflow:hidden;min-height:100%}
+    .map-wrap iframe{width:100%;height:100%;min-height:470px;border:0;filter:grayscale(.08) contrast(1.04)}
+
+    .footer{padding:24px 0 112px;color:var(--soft)}
+    .footer-inner{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .footer small{font-size:.9rem;line-height:1.6}
+
+    .floating-bar{
+      position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:80;
+      width:min(calc(100% - 20px),800px);padding:10px;border-radius:24px;
+      background:rgba(9,10,14,.88);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px);box-shadow:0 18px 45px rgba(0,0,0,.46)
+    }
+    .floating-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .floating-grid .btn{min-height:52px;font-size:.95rem}
+
+    @media (max-width:1120px){
+      .hero-grid,.grid-4,.grid-3,.faq-grid,.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}
+      .section-head{align-items:flex-start;flex-direction:column}
+      .hero-main{min-height:610px}
+    }
+    @media (max-width:860px){
+      :root{--nav-h:64px}
+      .nav-links{display:none}
+      .nav-actions .btn-outline{display:none}
+      .hero{padding-top:24px}
+      .hero-grid{grid-template-columns:1fr}
+      .hero-main,.panel,.card,.cta-band{padding:24px}
+      .hero-main{min-height:560px}
+      .hero-actions .btn,.cta-actions .btn{flex:1 1 100%}
+      .hero-stats{grid-template-columns:1fr}
+      .grid-4,.grid-3,.faq-grid,.contact-grid,.gallery-grid{grid-template-columns:1fr}
+      .gallery-card.large{grid-column:span 1;grid-row:span 1}
+      .cta-band{flex-direction:column;align-items:flex-start}
+      .map-wrap iframe{min-height:360px}
+      .footer{padding-bottom:120px}
+    }
+    @media (max-width:560px){
+      .container{width:min(calc(100% - 20px),var(--max))}
+      .brand strong{font-size:1.7rem}
+      .brand span{font-size:.68rem;letter-spacing:.16em}
+      .hero h1{font-size:clamp(2.7rem,11vw,4.2rem)}
+      .hero p{font-size:.98rem;line-height:1.82;padding:16px 16px}
+      .hero .handwritten{font-size:1.65rem}
+      .panel h3,.section-head h2,.cta-band h3{font-size:1.95rem}
+      .btn,.floating-grid .btn{min-height:54px;padding-inline:18px}
+      .floating-bar{bottom:8px;padding:6px;border-radius:18px;width:min(calc(100% - 12px),800px)}
+      .shooting-stars span{width:130px}
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-noise"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="shooting-stars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+  <header class="nav-wrap" id="navbar">
+    <div class="container nav">
+      <a class="brand" href="#anasayfa" aria-label="Nuri Ezveci Hair Salon ana sayfa">
+        <strong>nuri ezveci</strong>
+        <span>hair salon alanya</span>
+      </a>
+      <nav class="nav-links" aria-label="bölüm menüsü">
+        <a href="#anasayfa">ana sayfa</a>
+        <a href="#hizmetler">hizmetler</a>
+        <a href="#galeri">galeri</a>
+        <a href="#yorumlar">yorumlar</a>
+        <a href="#iletisim">iletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="tel:+905303008080">hemen ara</a>
+        <a class="btn btn-primary" href="https://wa.me/905303008080?text=merhaba%20nuri%20ezveci%20hair%20salon%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noopener">randevu al</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="container hero-grid">
+        <article class="hero-main reveal-left">
+          <div class="eyebrow"><span class="dot"></span> premium görünüm güçlü sosyal kanıt hızlı iletişim</div>
+          <h1>alanya’da <span>güven veren</span> premium saç deneyimi</h1>
+          <p>
+            nuri ezveci hair salon güçlü yorumları ve yüksek memnuniyet oranı ile ziyaretçiye ilk anda güven verir
+            yüksek puan yoğun yorum ve açık bilgi akışı sayesinde ziyaretçi ilk andan itibaren güven hisseder
+            sade ama etkili yapı kararı hızlandırır ve doğrudan randevu adımına taşır
+          </p>
+          <div class="handwritten">first impression matters</div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/905303008080?text=merhaba%20nuri%20ezveci%20hair%20salon%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noopener" aria-label="WhatsApp ile randevu al">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11.5A8.5 8.5 0 0 1 7.6 18.9L3 20l1.2-4.5A8.5 8.5 0 1 1 20 11.5Z"></path><path d="M8.7 9.6c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .5.4l.7 1.8c.1.2.1.4 0 .6l-.3.5c-.1.2-.2.3-.1.5.3.6 1.1 1.8 2.5 2.4.2.1.4.1.5 0l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.2.3.4 0 .3-.1 1-.5 1.3-.4.3-.9.5-1.5.4-1-.1-2.2-.6-3.8-2.2-1.8-1.7-2.4-3.1-2.5-4-.1-.5.1-1 .3-1.3Z"></path></svg>
+              randevu al whatsapp
+            </a>
+            <a class="btn btn-soft" href="tel:+905303008080" aria-label="Hemen ara">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.4 19.4 0 0 1 5.2 12.8 19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4 1.9h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8l-1.3 1.3a16 16 0 0 0 6.4 6.4l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"></path></svg>
+              hemen ara
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>4 9</strong>
+              <span>493 gerçek yorum kullanıcıya güven verir ve randevu kararını hızlandırır</span>
+            </div>
+            <div class="stat">
+              <strong>alanya</strong>
+              <span>merkezi konum sayesinde kullanıcı hızlıca ulaşır ve iletişime geçer</span>
+            </div>
+            <div class="stat">
+              <strong>09 00 00 00</strong>
+              <span>geniş çalışma saatleri kullanıcıya rahat randevu alma imkanı sağlar</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="side-stack">
+          <article class="panel glass reveal-right">
+            <h3>ilk bakışta premium etki bırakan giriş</h3>
+            <p>
+              ziyaretçi ilk saniyede karar verir bu yüzden üstte güçlü yorumlar net başlıklar premium copy ve tek tık iletişim ile direkt randevuya götüren daha vurucu bir akış kuruldu
+            </p>
+            <div class="mini-block">
+              <strong>ilk anda güven veren düzen</strong>
+              <span>puan yorum hizmetler ve iletişim alanları daha lüks bir hiyerarşiyle yerleştirildi kullanıcı bakınca neyin önemli olduğunu anında anlıyor</span>
+            </div>
+            <div class="mini-block">
+              <strong>yüksek kalite hissi</strong>
+              <span>dengeli renkler cam yüzeyler ışık geçişleri ve hareketli detaylar salonun seviyesini ilk ekranda daha net hissettirir</span>
+            </div>
+          </article>
+
+          <article class="panel glass reveal-right">
+            <h3>çalışma saatleri ve hızlı planlama</h3>
+            <p>güncel saat bilgileri daha okunur bir düzende tutuldu böylece ziyaretçi vakit kaybetmeden uygun saatini seçebiliyor</p>
+            <div class="hours" aria-label="çalışma saatleri listesi">
+              <div class="hour-row"><span>çarşamba</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>perşembe</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>cuma</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>cumartesi</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>pazar</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>pazartesi</span><span>09 00 — 00 00</span></div>
+              <div class="hour-row"><span>salı</span><span>09 00 — 00 00</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>ziyaretçiyi direkt randevuya götüren sistem</h2>
+            <p>bu yapı kullanıcıyı oyalamadan güven verip iletişime geçirir ve dönüşüm ihtimalini yükseltir</p>
+          </div>
+          <div class="small-tag">randevuya yönlendiren akış</div>
+        </div>
+        <div class="grid-4">
+          <article class="card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3>ilk anda ikna eden güven</h3>
+            <p>yüksek puan ve yorum sayısı kullanıcıya doğru tercihi yaptığını hissettirir</p>
+          </article>
+          <article class="card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"></path><path d="M12 4v16"></path><path d="M18 6 6 18"></path></svg>
+            </div>
+            <h3>premium ve net içerik akışı</h3>
+            <p>metinler daha güçlü ve daha premium hisle yeniden düzenlendiği için kullanıcı hızlıca etkilenip randevuya yaklaşır</p>
+          </article>
+          <article class="card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9"></circle></svg>
+            </div>
+            <h3>tek tıkla randevu butonları</h3>
+            <p>randevu al whatsapp ve hemen ara butonları en görünür noktalara yerleştirildi</p>
+          </article>
+          <article class="card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16"></path><path d="M7 20V10"></path><path d="M12 20V4"></path><path d="M17 20v-7"></path></svg>
+            </div>
+            <h3>kararı hızlandıran satış akışı</h3>
+            <p>önce güven sonra hizmet sonra sosyal kanıt ve iletişim sıralamasıyla kullanıcı doğal şekilde randevuya itilir</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="hizmetler" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>premium sunulan öne çıkan hizmetler</h2>
+            <p>hizmet başlıkları daha güçlü bir dille yeniden yazıldı böylece salonun uzmanlığı daha lüks ve daha net hissediliyor</p>
+          </div>
+          <div class="small-tag">net hizmet sunumu</div>
+        </div>
+        <div class="grid-3">
+          <article class="card service-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 7 3-3 3 3-3 3-3-3Z"></path><path d="M4 20c2-5 6-9 11-11"></path><path d="m4 20 4-1"></path></svg>
+            </div>
+            <h3>saç kesimi</h3>
+            <p>kişiye özel kesim saçın daha düzenli ve bakımlı görünmesini sağlar</p>
+            <div class="tags">
+              <span class="tag">kesim uzmanlığı</span>
+              <span class="tag">yüz uyumu</span>
+              <span class="tag">net form</span>
+              <span class="tag">bakımlı görünüm</span>
+            </div>
+          </article>
+          <article class="card service-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20c6-2 10-6 12-12"></path><path d="m14 4 6 6"></path><path d="M8 16 4 20"></path></svg>
+            </div>
+            <h3>renklendirme ve tonlama</h3>
+            <p>renk uygulamaları saça canlı ve dikkat çekici görünüm kazandırır</p>
+            <div class="tags">
+              <span class="tag">doğru ton</span>
+              <span class="tag">parlak sonuç</span>
+              <span class="tag">uyumlu geçiş</span>
+              <span class="tag">canlı görünüm</span>
+            </div>
+          </article>
+          <article class="card service-card">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h10"></path><path d="M9 3v5l-4 8a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-8V3"></path><path d="M8 13h8"></path></svg>
+            </div>
+            <h3>bakım ve şekillendirme</h3>
+            <p>bakım ve şekillendirme saçın gün boyu düzenli kalmasını sağlar</p>
+            <div class="tags">
+              <span class="tag">yoğun bakım</span>
+              <span class="tag">düzenli form</span>
+              <span class="tag">canlı etki</span>
+              <span class="tag">güçlü final</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>randevu kararını güçlendiren unsurlar</h2>
+            <p>güçlü yorumlar ve kolay iletişim ile daha fazla randevu getiren bir yapı oluşturuldu</p>
+          </div>
+          <div class="small-tag">randevu getiren yapı</div>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h4>tercih edilme etkisi</h4>
+            <p>493 yorum salonun yoğun tercih edildiğini gösterir</p>
+          </article>
+          <article class="card">
+            <h4>tek tık iletişim</h4>
+            <p>tüm iletişim kanalları tek yerde olduğu için kullanıcı anında iletişime geçer</p>
+          </article>
+          <article class="card">
+            <h4>mobilde hızlı kullanım</h4>
+            <p>mobilde hızlı ve sorunsuz bir kullanım sunuldu</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>görsel etki alanı</h2>
+            <p>güçlü görseller premium algıyı yükseltir ve kullanıcıyı daha hızlı ikna eder</p>
+          </div>
+          <div class="small-tag">premium görünüm</div>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-card large">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80" alt="Premium saç tasarım görünümü" loading="lazy">
+            <div class="gallery-label">hair artistry</div>
+          </div>
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" alt="Saç bakım ve görünüm detayları" loading="lazy">
+            <div class="gallery-label">shine and detail</div>
+          </div>
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Salon içi premium atmosfer" loading="lazy">
+            <div class="gallery-label">salon atmosphere</div>
+          </div>
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Şekillendirilmiş saç görünümü" loading="lazy">
+            <div class="gallery-label">signature finish</div>
+          </div>
+          <div class="gallery-card large">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="Kuaför işlemi premium sonuç" loading="lazy">
+            <div class="gallery-label">elevated styling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="yorumlar" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>güven oluşturan yorumlar</h2>
+            <p>4 9 puan ve 493 yorum premium hizmet algısını büyütür ve kullanıcıyı daha hızlı randevuya yönlendirir</p>
+          </div>
+          <div class="small-tag">yüksek güven</div>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h4>yüksek memnuniyet algısı</h4>
+            <p>yoğun yorumlar sürekli memnuniyet olduğunu gösterir ve randevu ihtimalini artırır</p>
+          </article>
+          <article class="card">
+            <h4>net ve güven veren görünüm</h4>
+            <p>tüm bilgiler tek yerde olduğu için salon daha güvenilir görünür</p>
+          </article>
+          <article class="card">
+            <h4>randevuya çeviren yapı</h4>
+            <p>bu yapı gelen kullanıcıyı randevuya dönüştürür</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>randevu için en doğru an şimdi</h3>
+            <p>güçlü ilk izlenim premium metinler ve görünür iletişim alanları sayesinde ziyaretçinin kararı hızlanır bu yüzden randevu butonları en kuvvetli noktalarda konumlandı</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/905303008080?text=merhaba%20nuri%20ezveci%20hair%20salon%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noopener">randevu al whatsapp</a>
+            <a class="btn btn-outline" href="tel:+905303008080">hemen ara</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>sık sorulan sorular</h2>
+            <p>karar aşamasındaki temel sorular kısa ve net şekilde yanıtlandı</p>
+          </div>
+          <div class="small-tag">net cevaplar</div>
+        </div>
+        <div class="faq-grid">
+          <details>
+            <summary>randevu almak için en hızlı yol ne <span>+</span></summary>
+            <p>en hızlı yol whatsapp üzerinden kısa bir mesaj göndermek ya da hemen ara butonunu kullanmaktır böylece doğrudan salonla iletişime geçilebilir</p>
+          </details>
+          <details>
+            <summary>salon nerede bulunuyor <span>+</span></summary>
+            <p>kadıpaşa mahallesi cüceler sokak no 2b 07400 alanya antalya adresinde bulunur konum bilgisi aşağıdaki haritada yer alır</p>
+          </details>
+          <details>
+            <summary>çalışma saatleri nasıl <span>+</span></summary>
+            <p>haftanın her günü sabah 09 00 ile gece 00 00 arasında açıktır bu da ziyaretçi için rahat planlama avantajı sağlar</p>
+          </details>
+          <details>
+            <summary>sosyal medya hesapları var mı <span>+</span></summary>
+            <p>evet instagram ve facebook bağlantıları iletişim alanında görünür şekilde yer alır kullanıcı tek dokunuşla profillere geçebilir</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim" class="reveal">
+      <div class="container contact-grid">
+        <article class="card">
+          <div class="section-head" style="margin-bottom:12px">
+            <div>
+              <h2>iletişim ve konum</h2>
+              <p>konum telefon ve sosyal medya bağlantıları net gösterildiği için ziyaretçi rahat biçimde aksiyon alabilir</p>
+            </div>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.4 19.4 0 0 1 5.2 12.8 19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4 1.9h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8l-1.3 1.3a16 16 0 0 0 6.4 6.4l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"></path></svg>
+              <div>
+                <strong>telefon</strong>
+                <a href="tel:+905303008080">0530 300 80 80</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6-4.35-6-10a6 6 0 1 1 12 0c0 5.65-6 10-6 10Z"></path><circle cx="12" cy="11" r="2.5"></circle></svg>
+              <div>
+                <strong>adres</strong>
+                <span>kadıpaşa mahallesi cüceler sokak no 2b 07400 alanya antalya</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
+              <div>
+                <strong>sosyal medya</strong>
+                <span><a href="https://www.instagram.com/nuriezvecihairsalon/" target="_blank" rel="noopener">instagram profilini aç</a> · <a href="https://www.facebook.com/kuafor.nuri.ezveci/" target="_blank" rel="noopener">facebook profilini aç</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-actions" style="margin-top:22px">
+            <a class="btn btn-primary" href="https://wa.me/905303008080?text=merhaba%20nuri%20ezveci%20hair%20salon%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noopener">randevu al whatsapp</a>
+            <a class="btn btn-outline" href="tel:+905303008080">hemen ara</a>
+          </div>
+        </article>
+
+        <div class="map-wrap">
+          <iframe
+            title="Nuri Ezveci Hair Salon konum haritası"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Kad%C4%B1pa%C5%9Fa%20C%C3%BCceler%20Sk.%20No:2B%2007400%20Alanya%20Antalya&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <small>nuri ezveci hair salon alanya için hazırlanmış premium mobil uyumlu kuaför sitesi</small>
+      <small>alanya antalya · instagram · facebook · whatsapp · telefon</small>
+    </div>
+  </footer>
+
+  <div class="floating-bar" aria-label="hızlı iletişim barı">
+    <div class="floating-grid">
+      <a class="btn btn-primary" href="https://wa.me/905303008080?text=merhaba%20nuri%20ezveci%20hair%20salon%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11.5A8.5 8.5 0 0 1 7.6 18.9L3 20l1.2-4.5A8.5 8.5 0 1 1 20 11.5Z"></path><path d="M8.7 9.6c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .5.4l.7 1.8c.1.2.1.4 0 .6l-.3.5c-.1.2-.2.3-.1.5.3.6 1.1 1.8 2.5 2.4.2.1.4.1.5 0l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.2.3.4 0 .3-.1 1-.5 1.3-.4.3-.9.5-1.5.4-1-.1-2.2-.6-3.8-2.2-1.8-1.7-2.4-3.1-2.5-4-.1-.5.1-1 .3-1.3Z"></path></svg>
+        randevu al
+      </a>
+      <a class="btn btn-outline" href="tel:+905303008080">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.4 19.4 0 0 1 5.2 12.8 19.8 19.8 0 0 1 2.1 4.1 2 2 0 0 1 4 1.9h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8l-1.3 1.3a16 16 0 0 0 6.4 6.4l1.3-1.3a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 2Z"></path></svg>
+        hemen ara
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible')
+          io.unobserve(entry.target)
+        }
+      })
+    },{threshold:.14})
+    reveals.forEach(el=>io.observe(el))
+
+    const heroMain = document.querySelector('.hero-main')
+    window.addEventListener('mousemove',(e)=>{
+      if(window.innerWidth < 900 || !heroMain) return
+      const x = (e.clientX / window.innerWidth - .5) * 12
+      const y = (e.clientY / window.innerHeight - .5) * 12
+      heroMain.style.transform = `translate3d(${x * -.45}px, ${y * -.45}px, 0)`
+    },{passive:true})
+
+    document.querySelectorAll('.hour-row').forEach((row,index)=>{
+      row.style.animation = `fadeRise .8s cubic-bezier(.22,1,.36,1) both ${0.15 + index * 0.06}s`
+    })
+
+    let lastY = window.scrollY
+    const nav = document.getElementById('navbar')
+    window.addEventListener('scroll',()=>{
+      const currentY = window.scrollY
+      if(currentY > 20){
+        nav.classList.add('scrolled')
+      } else {
+        nav.classList.remove('scrolled')
+      }
+      if(currentY > lastY && currentY > 120){
+        nav.classList.add('hide')
+      } else {
+        nav.classList.remove('hide')
+      }
+      lastY = currentY
+    },{passive:true})
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Nuri Ezveci Hair Salon Alanya",
+    "telephone":"+90 530 300 80 80",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Kadıpaşa, Cüceler Sk. No:2B",
+      "addressLocality":"Alanya",
+      "addressRegion":"Antalya",
+      "postalCode":"07400",
+      "addressCountry":"TR"
+    },
+    "sameAs":[
+      "https://www.instagram.com/nuriezvecihairsalon/",
+      "https://www.facebook.com/kuafor.nuri.ezveci/"
+    ],
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"4.9",
+      "reviewCount":"493"
+    }
+  }
+  </script>
+  <script>
+    document.querySelectorAll('details').forEach(item=>{
+      item.addEventListener('toggle',()=>{
+        if(item.open){
+          document.querySelectorAll('details').forEach(other=>{
+            if(other !== item) other.open = false
+          })
+        }
+      })
+    })
+  </script>
+</body>
+</html>
